@@ -1,0 +1,120 @@
+.project-mockup {
+  height: 70vh;
+  aspect-ratio: 9/16;
+
+  // bottom: -140vh;
+  position: absolute;
+  right: 0px;
+  transition: all 0.5s ease-out;
+}
+
+.portfolio-container {
+  height: 700vh;
+}
+
+.project {
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+  .left-side {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 1%;
+    left: 0px;
+    background-color: white;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 1rem;
+  }
+
+  .wrapper {
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    margin: 0.5rem;
+    .project-number {
+      font-size: 6rem;
+      font-family: AvenirRoman;
+      color: rgb(164 164 164 / 95%);
+      letter-spacing: 2px;
+    }
+
+    .project-name {
+      font-family: AvenirHeavy;
+      font-size: 6rem;
+      @media (max-width: 700px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .features {
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    & li {
+      font-family: AvenirLight;
+    }
+    .dynamic-text {
+      padding: 0.5rem;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+}
+
+.dynamic-text {
+  position: relative;
+  font-size: 2rem;
+  overflow: hidden;
+  font-family: Raleway;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
+}
+.dynamic-text::after {
+  position: absolute;
+  overflow: hidden;
+  content: "";
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid black;
+  background-color: black;
+  transition: left 0.5s ease-in;
+}
+
+.project .reveal-animation .dynamic-text::after {
+  animation: reveal 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  // opacity: 0.5;
+}
+.project .unreveal-animation .dynamic-text::after {
+  animation: unreveal 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  // opacity: 0.5;
+}
+
+@keyframes reveal {
+  100% {
+    left: 140%;
+    margin: 0 35px;
+  }
+}
+
+@keyframes unreveal {
+  100% {
+    left: 0%;
+    margin: 0;
+  }
+}
+
+.project-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+}

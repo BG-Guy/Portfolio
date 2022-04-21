@@ -1,0 +1,15 @@
+.resume-container {
+  width: 100vw;
+  h1,
+  p {
+    font-family: Raleway;
+  }
+
+  .max-width-container {
+    max-width: 50rem;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid grey;
+    border-radius: 10px;
+  }
+}
