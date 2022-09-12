@@ -1,11 +1,11 @@
 <template>
-  <div v-if="getScrolledInWindow > 200" class="project">
+  <div v-if="getScrolledInWindow > windowHeight / 8" class="project">
     <div
       :class="
         getScrolledInWindow > windowHeight / 4 &&
-        getScrolledInWindow < windowHeight + 500
+        getScrolledInWindow < windowHeight
           ? 'reveal-animation'
-          : 'reveal-animation'
+          : ''
       "
       class="left-side"
     >
@@ -27,7 +27,7 @@
       <div class="wrapper">
         <span>{{ project.date }}</span>
       </div>
-      <div v-if="getScrolledInWindow < windowHeight * 1.5" class="wrapper">
+      <div v-if="getScrolledInWindow < windowHeight" class="wrapper">
         <span
           v-for="feature in project.features"
           :key="feature"
@@ -65,14 +65,7 @@ export default {
       scrolledInWindow: this.getScrolledInWindow,
     };
   },
-  mounted() {
-    console.log(
-      `scrolled in ${this.project.projNum}, ${this.scrolledInWindow} `
-    );
-    console.log(
-      `project ${this.project.name} window height: ${this.windowHeight}`
-    );
-  },
+  mounted() {},
   computed: {
     getScrolledInWindow() {
       return this.scrollHeight - this.windowHeight * this.project.projNum;

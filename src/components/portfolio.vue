@@ -35,13 +35,27 @@ export default {
           projNum: 1,
         },
         {
+          name: "Mister Bitcoin",
+          description:
+            "A full CRUD SPA. Send and Recieve bitcoin! authentication included",
+          features: ["CRUD", "Authentication", "API", "CHART"],
+          githubLink: "https://worker-fiverr-prjj.herokuapp.com/#/",
+
+          imgs: [
+            "MisterBitcoin-mobile",
+            "MisterBitcoin-tablet",
+            "MisterBitcoin-tablet2",
+          ],
+          projNum: 2,
+        },
+        {
           name: "Pacman",
           description: "Inspired by google - keeps and gmail",
           features: ["Vanilla Js", "Board-Game", "Timer", "Dynamic Images"],
           githubLink: "https://bg-guy.github.io/Pacman/",
 
           imgs: ["pacman-mobile", "pacman-tablet"],
-          projNum: 2,
+          projNum: 3,
         },
         {
           name: "Minesweeper",
@@ -55,7 +69,7 @@ export default {
           githubLink: "https://bg-guy.github.io/Mine-Sweeper/",
 
           imgs: ["minesweeper-mobile", "minesweeper-tablet"],
-          projNum: 3,
+          projNum: 4,
         },
         {
           name: "appSus",
@@ -64,7 +78,7 @@ export default {
           githubLink: "https://bg-guy.github.io/appSus/",
 
           imgs: ["appsus-mobile", "appsus-tablet"],
-          projNum: 4,
+          projNum: 5,
         },
         {
           name: "Chess",
@@ -74,7 +88,7 @@ export default {
           githubLink: "https://bg-guy.github.io/Chess/",
 
           imgs: ["chess-mobile", "chess-tablet"],
-          projNum: 5,
+          projNum: 6,
         },
         {
           name: "Meme Generator",
@@ -84,7 +98,7 @@ export default {
           githubLink: "https://bg-guy.github.io/Meme-Generator/",
 
           imgs: ["memegenerator-mobile", "memegenerator-tablet"],
-          projNum: 6,
+          projNum: 7,
         },
       ],
     };
@@ -93,11 +107,6 @@ export default {
   mounted() {
     window.addEventListener("scroll", () => {
       this.scrollHeight = window.scrollY;
-      console.log(
-        "🚀 ~ file: portfolio.vue ~ line 84 ~ window.addEventListener ~ this.scrollHeight",
-        this.scrollHeight
-      );
-      console.log(`${this.windowHeight}`);
     });
   },
 
