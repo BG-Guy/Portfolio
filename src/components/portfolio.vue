@@ -1,6 +1,5 @@
 <template>
   <div class="portfolio-container">
-    <h1>HI</h1>
     <div class="max-width-container">
       <div v-for="project in projects" :key="project">
         <Project
