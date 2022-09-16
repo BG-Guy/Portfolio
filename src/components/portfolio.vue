@@ -39,7 +39,7 @@ export default {
           description:
             "A full CRUD SPA. Send and Recieve bitcoin! authentication included",
           features: ["CRUD", "Authentication", "API", "CHART"],
-          githubLink: "https://worker-fiverr-prjj.herokuapp.com/#/",
+          githubLink: "https://bg-guy.github.io/Mister-Bitcoin-Angullar/",
 
           imgs: [
             "MisterBitcoin-mobile",
