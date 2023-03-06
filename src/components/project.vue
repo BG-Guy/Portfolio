@@ -43,7 +43,7 @@
       :key="img"
       :style="{
         transform: `translate(0px,-${
-          (getScrolledInWindow / 7).toFixed() * (idx * 2 + 2)
+          (getScrolledInWindow / 5).toFixed() * (idx * 2 + 2)
         }%`,
         bottom: `-${120 + 40 * idx}%`,
       }"
